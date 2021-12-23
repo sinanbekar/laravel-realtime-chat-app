@@ -57,4 +57,11 @@ DB::table('rooms')->insert(array_map(function ($room) {
 }
 ```
 
+Install npm packages and compile assets
+
+```bash
+npm install && npm run dev
+```
+
+
 You can access the chat page by visiting http://localhost/chat after login.
