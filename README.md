@@ -4,6 +4,8 @@ You can build yours from scratch with the following Medium article
 
 [https://medium.com/@sinan.bekar/build-a-real-time-chat-app-with-laravel-and-react-5cae5a7c22d4](https://medium.com/@sinan.bekar/build-a-real-time-chat-app-with-laravel-and-react-5cae5a7c22d4)
 
+In production demo app: [http://laravel-chat-app.ml/](http://laravel-chat-app.ml/)
+
 #### Installation with Docker (Laravel Sail)
 
 Install composer packages:
