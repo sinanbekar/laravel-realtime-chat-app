@@ -3606,7 +3606,7 @@ var Chat = /*#__PURE__*/function (_React$Component) {
                 return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
                   className: "list-none",
                   children: user.name
-                }, "activeUser_".concat(user.id, "_").concat(user.name));
+                }, user.id);
               })
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
@@ -3622,7 +3622,7 @@ var Chat = /*#__PURE__*/function (_React$Component) {
                     className: "list-none p-2 bg-gray-200 dark:bg-gray-600 my-2 rounded-md cursor-pointer",
                     children: ["# ", room]
                   })
-                }, "room_".concat(i, "_").concat(room));
+                }, i);
               })
             })]
           })]
@@ -3644,7 +3644,7 @@ var Chat = /*#__PURE__*/function (_React$Component) {
             className: "h-[30rem] overflow-y-scroll",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
               className: "flex items-start flex-col",
-              children: [this.state.messages.map(function (message) {
+              children: [this.state.messages.map(function (message, i) {
                 return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
                   className: "px-4 py-2 m-2 max-w-xs bg-gray-200 dark:bg-gray-600 rounded-xl ".concat(message.user_id !== _this3.props.auth.user.id ? "rounded-bl-none" : "rounded-br-none self-end", " "),
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
@@ -3663,7 +3663,7 @@ var Chat = /*#__PURE__*/function (_React$Component) {
                       children: message.message
                     })
                   })]
-                }, "message_".concat(_this3.props.chatData.room, "_").concat(message.id, "_").concat(message.created_at));
+                }, i);
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                 ref: this.messagesEndRef
               })]

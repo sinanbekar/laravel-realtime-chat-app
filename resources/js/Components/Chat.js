@@ -143,7 +143,7 @@ class Chat extends React.Component {
                             {this.state.activeUsers.map((user) => (
                                 <li
                                     className="list-none"
-                                    key={`activeUser_${user.id}_${user.name}`}
+                                    key={user.id}
                                 >
                                     {user.name}
                                 </li>
@@ -157,7 +157,7 @@ class Chat extends React.Component {
                             {this.props.chatData.rooms.map((room, i) => {
                                 return (
                                     <Link
-                                        key={`room_${i}_${room}`}
+                                        key={i}
                                         href={`/chat/${room}`}
                                     >
                                         <li className="list-none p-2 bg-gray-200 dark:bg-gray-600 my-2 rounded-md cursor-pointer">
@@ -182,9 +182,9 @@ class Chat extends React.Component {
 
                     <div className="h-[30rem] overflow-y-scroll">
                         <div className="flex items-start flex-col">
-                            {this.state.messages.map((message) => (
+                            {this.state.messages.map((message, i) => (
                                 <div
-                                    key={`message_${this.props.chatData.room}_${message.id}_${message.created_at}`}
+                                    key={i}
                                     className={`px-4 py-2 m-2 max-w-xs bg-gray-200 dark:bg-gray-600 rounded-xl ${
                                         message.user_id !==
                                         this.props.auth.user.id

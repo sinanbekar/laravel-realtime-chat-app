@@ -6,7 +6,7 @@ You can build yours from scratch with the following Medium article
 
 #### Installation with Docker (Laravel Sail)
 
-Install composer packages
+Install composer packages:
 ```bash
 docker run --rm \
     -u "$(id -u):$(id -g)" \
@@ -16,35 +16,35 @@ docker run --rm \
     composer install --ignore-platform-reqs
 ```
 
-Create .env
+Create .env:
 ```bash
 cp .env.example .env
 ```
 
-Sail up
+Sail up:
 
 ```bash
 ./vendor/bin/sail up -d
 ```
 
-Generate app key
+Generate app key:
 
 ```bash
 ./vendor/bin/sail artisan key:generate
 ```
 
-Clean cache and migrate
+Clean cache and migrate:
 
 ```bash
 ./vendor/bin/sail artisan cache:clear && ./vendor/bin/sail artisan migrate
 ```
 
-Run tinker
+Run tinker:
 ```bash
 ./vendor/bin/sail artisan tinker
 ```
 
-Create users and rooms
+Create users and rooms:
 
 ```php
 \App\Models\User::factory(5)->create();
@@ -57,7 +57,7 @@ DB::table('rooms')->insert(array_map(function ($room) {
 }
 ```
 
-Install npm packages and compile assets
+Install npm packages and compile assets:
 
 ```bash
 npm install && npm run dev
